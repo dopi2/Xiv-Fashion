@@ -1,0 +1,115 @@
+.wishlist-page {
+  padding: 60px 0;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.empty-wishlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.empty-wishlist svg {
+  margin-bottom: 20px;
+  stroke: #333;
+}
+
+.empty-wishlist h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.empty-wishlist p {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.wishlist-summary {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.wishlist-item {
+  position: relative;
+}
+
+.remove-from-wishlist {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.wishlist-item:hover .remove-from-wishlist {
+  opacity: 1;
+  visibility: visible;
+}
+
+.remove-from-wishlist:hover {
+  background-color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .wishlist-page {
+    padding: 40px 0;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .wishlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+  }
+  
+  .remove-from-wishlist {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    transform: none;
+    left: auto;
+    width: 100%;
+  }
+}
